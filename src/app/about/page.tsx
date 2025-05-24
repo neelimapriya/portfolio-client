@@ -82,7 +82,7 @@ const AboutPage = () => {
                 2018 – 2024
               </td>
               <td className="border border-gray-700 px-4 py-2">
-                <Link style={{ textShadow: '0 0 20px  #fff' }} href="https://drive.google.com/file/d/1yckCCFWwSq0UOWd2U_vR2JUkpKsX8RTq/view?usp=sharing">Click🔗</Link>
+                {/* <Link style={{ textShadow: '0 0 20px  #fff' }} href="https://drive.google.com/file/d/1yckCCFWwSq0UOWd2U_vR2JUkpKsX8RTq/view?usp=sharing">Click🔗</Link> */}
                 
               </td>
             </tr>

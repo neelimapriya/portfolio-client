@@ -93,6 +93,8 @@ const backendEndSkillData: skills[] = [
 const SkillsPage = () => {
   return (
     <div className="">
+      <h2 className="text-[#F4FBA3] text-2xl text-center font-semibold uppercase">Skills & Technologies</h2>
+      <p className="text-gray-200 text-center w-full lg:w-2/3 mx-auto mb-5">As a full-stack developer, I bring together the best of both frontend and backend technologies to build fast, scalable, and responsive web applications. From crafting clean UI components to managing databases and server-side logic, here&apos;s a snapshot of the tools and technologies I work with regularly.</p>
       <div className="flex flex-col md:flex-row w-full">
         <div className="overflow-x-auto bg-black text-white p-4 rounded-lg md:w-1/2">
           <h2 className="text-lg font-semibold mb-4">FrontEnd Skills</h2>
