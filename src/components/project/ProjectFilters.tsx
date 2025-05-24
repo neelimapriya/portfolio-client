@@ -63,19 +63,19 @@ const ProjectFilter = ({
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
+        className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4"
       >
         {/* Desktop Category Tabs */}
         <div className="hidden md:block w-full md:w-auto">
           <Tabs
             value={category}
             onValueChange={onCategoryChange}
-            className="w-full md:w-auto"
+            className="w-full md:w-auto "
           >
-            <TabsList className="bg-white/50 dark:bg-black/50 backdrop-blur-sm border border-black p-1 rounded-xl">
+            <TabsList className="bg-white/50 dark:bg-black/50 backdrop-blur-sm border border-black p-1 rounded-xl ">
               <TabsTrigger
                 value="all"
-                className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#F4FBA3] data-[state=active]:to-yellow-300 data-[state=active]:text-black data-[state=active]:shadow-md transition-all duration-300"
+                className="rounded-lg  data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#F4FBA3] data-[state=active]:to-yellow-300 data-[state=active]:text-black data-[state=active]:shadow-md transition-all duration-300"
               >
                 All Projects
               </TabsTrigger>
