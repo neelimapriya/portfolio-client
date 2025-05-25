@@ -5,7 +5,8 @@ export interface TProject {
   description: string;
   category: string;
   image: string;
-  githubUrl?: string;
+  githubClientUrl?: string;
+  githubServerUrl?: string;
   liveUrl?: string;
   technologies: string;
   createdAt: string;

@@ -19,28 +19,27 @@ const ProjectsPage = () => {
     getQueryParams,
   } = useProjectFilters();
 
-  const { isFetching, isLoading, isError, data, error } =
-    useGetAllProjectsQuery(getQueryParams());
-    console.log(data);
+  const { isFetching, isLoading, isError, data, error } = useGetAllProjectsQuery(getQueryParams());
 
   const ProjectsSkeleton = () => (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {[...Array(limit)].map((_, index) => (
-        <Skeleton key={index} className="h-[400px] w-full" />
+        <Skeleton key={index} className="h-[400px] w-full rounded-xl bg-[#1e1e1e]" />
       ))}
     </div>
   );
 
   return (
-    <div className="max-w-[1400px] w-full mx-auto py-28 px-4 md:px-6 lg:px-8 flex flex-col gap-12">
-      <div className="text-center mb-8">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 ">
-          All Projects
+    <section className="w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
+      <header className="text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#F4FBA3] mb-4">
+          Explore Projects
         </h2>
-        <p className="text-[#F4FBA3] max-w-2xl mx-auto">
-         Explore my recent projects and portfolio highlights.
+        <p className="text-lg text-gray-300 max-w-xl mx-auto">
+          Dive into a curated collection of full-stack applications and creative web solutions.
         </p>
-      </div>
+      </header>
+
       <ProjectFilter
         category={category}
         onCategoryChange={setCategory}
@@ -48,30 +47,34 @@ const ProjectsPage = () => {
         onSortChange={setSortBy}
       />
 
-      {isFetching || isLoading ? (
-        <ProjectsSkeleton />
-      ) : isError || error ? (
-        // <Error message="Error fetching projects" />
-        <p>Error fetching project</p>
-      ) : (
-        <>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5">
-            {data?.data?.map((project) => (
-              <ProjectCard key={project?._id} project={project} />
-            ))}
-          </div>
-          {data?.data?.length === 0 && 
-          // <Error message="No projects found" />
-          <p>project not found</p>
-          }
-          <Pagination
-            currentPage={currentPage}
-            totalPages={data?.meta?.totalPage || 1}
-            onPageChange={setCurrentPage}
-          />
-        </>
-      )}
-    </div>
+      <div className="mt-10">
+        {isFetching || isLoading ? (
+          <ProjectsSkeleton />
+        ) : isError || error ? (
+          <p className="text-red-500 text-center">Error fetching projects.</p>
+        ) : (
+          <>
+            {data?.data?.length === 0 ? (
+              <p className="text-center text-gray-400">No projects found.</p>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {data?.data?.map((project) => (
+                  <ProjectCard key={project?._id} project={project} />
+                ))}
+              </div>
+            )}
+
+            <div className="mt-12">
+              <Pagination
+                currentPage={currentPage}
+                totalPages={data?.meta?.totalPage || 1}
+                onPageChange={setCurrentPage}
+              />
+            </div>
+          </>
+        )}
+      </div>
+    </section>
   );
 };
 

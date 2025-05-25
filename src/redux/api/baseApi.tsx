@@ -19,6 +19,7 @@ interface IErrorResponse {
 }
 
 const API_BASE_URL = "http://localhost:5000/api";
+// const API_BASE_URL = "https://portfolio-backend-omega-five.vercel.app/api";
 
 const baseQuery = fetchBaseQuery({
   baseUrl: API_BASE_URL,
@@ -26,7 +27,7 @@ const baseQuery = fetchBaseQuery({
 });
 
 const baseQueryWithInterceptor: BaseQueryFn<
-  string | FetchArgs,
+  string | FetchArgs, 
   unknown,
   IErrorResponse
 > = async (args, api, extraOptions) => {
