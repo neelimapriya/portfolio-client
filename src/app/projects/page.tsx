@@ -57,7 +57,7 @@ const ProjectsPage = () => {
             {data?.data?.length === 0 ? (
               <p className="text-center text-gray-400">No projects found.</p>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1  lg:grid-cols-2 gap-6">
                 {data?.data?.map((project) => (
                   <ProjectCard key={project?._id} project={project} />
                 ))}

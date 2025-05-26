@@ -11,7 +11,6 @@ import type { TProject } from "@/types/project.type";
 import { ExternalLink, Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa6";
 
 interface ProjectCardProps {
   project: TProject;
@@ -19,7 +18,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <Card className="group flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+    <Card className="group bg-white flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
       <CardHeader className="p-0 overflow-hidden">
         <div className="relative h-48 w-full">
           <Image
@@ -51,11 +50,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
           {project?.technologies}
         </p>
-        
       </CardContent>
       <CardFooter className="p-5 pt-0 border-t border-black ">
         <div className="flex justify-between w-full items-center gap-2 mt-2">
-          {project?.githubUrl && (
+          {/* {project?.githubClientUrl && (
             <Button
               asChild
               variant="ghost"
@@ -64,25 +62,43 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 "
             >
               <Link
-                href={project?.githubUrl}
+                href={project?.githubClientUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaGithub className="mr-1 h-3.5 w-3.5" />
-                Repo
+                Github Client
               </Link>
             </Button>
           )}
+          {project?.githubServerUrl && (
+            <Button
+              asChild
+              variant="ghost"
+              size="sm"
+              className="text-xs px-2 py-1 text-black hover:text-[#F4FBA3] hover:bg-black 
+                "
+            >
+              <Link
+                href={project?.githubServerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="mr-1 h-3.5 w-3.5" />
+                Github Server
+              </Link>
+            </Button>
+          )} */}
 
           <Button
             asChild
             variant="outline"
             size="sm"
-            className="text-xs px-2 py-1 text-black hover:text-[#F4FBA3] hover:bg-black"
+            className="text-xs px-2 py-1 border border-black text-black  "
           >
             <Link href={`/projects/${project?._id}`}>
               <ExternalLink className="mr-1 h-3.5 w-3.5" />
-              View
+              Project Details
             </Link>
           </Button>
 
@@ -99,7 +115,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 rel="noopener noreferrer"
               >
                 <Globe className="mr-1 h-3.5 w-3.5" />
-                Live
+                Live Link
               </Link>
             </Button>
           )}

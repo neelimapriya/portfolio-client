@@ -41,8 +41,8 @@ const ProjectDetailsPage = () => {
     <div className="min-h-screen bg-black text-[#F4FBA3] px-6 py-10" ref={containerRef}>
       <div className="max-w-6xl mx-auto space-y-12">
        
-        <div className="mb-6">
-          <Button asChild variant="outline" size="sm" className="border-[#F4FBA3] text-black bg-[#F4FBA3] hover:text-black hover:bg-white">
+        <div className="mb-6 ">
+          <Button asChild variant="outline" size="sm" className="text-[#F4FBA3]  hover:text-black hover:bg-white">
             <Link href="/projects" className="flex items-center gap-2">
               <ArrowLeft size={16} /> Back to Projects
             </Link>
