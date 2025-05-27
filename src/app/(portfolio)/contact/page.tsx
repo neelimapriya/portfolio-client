@@ -1,17 +1,17 @@
-import ContactForm from "@/components/contact/contactForm";
-import { FormData } from "@/types/contact.type";
-import { Mail } from "lucide-react";
-import nodemailer from "nodemailer";
-import image from "@/assets/contactPicture.png";
-import Image from "next/image";
+import ContactForm from '@/components/contact/contactForm';
+import { FormData } from '@/types/contact.type';
+import { Mail, PhoneIcon } from 'lucide-react';
+import nodemailer from 'nodemailer';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
 const ContactPage = () => {
   const sendMail = async (formData: FormData) => {
-    "use server";
+    'use server';
     try {
       // nodemailer setup
       const transporter = nodemailer.createTransport({
-        service: "gmail",
+        service: 'gmail',
         auth: {
           user: process.env.EMAIL_USERNAME,
           pass: process.env.EMAIL_PASS,
@@ -20,9 +20,9 @@ const ContactPage = () => {
       const mailOptions = {
         from: formData.email,
         to: process.env.RECEIVER_EMAIL,
-        subject: "",
+        subject: '',
         text: formData.message,
-        html: "",
+        html: '',
       };
       // send mail
       await transporter.sendMail(mailOptions);
@@ -34,65 +34,42 @@ const ContactPage = () => {
     } catch (error) {
       return {
         success: false,
-        error: "Oops! an error occurred!",
+        error: 'Oops! an error occurred!',
       };
     }
   };
   return (
-    <div className="flex flex-col md:flex-row w-full md:mt-5">
+    <div className="flex flex-col md:flex-row w-full md:mt-5 gap-6">
       <div className="w-full md:w-1/2">
-        <h2 className="text-lg md:text-2xl lg:text-3xl text-center font-bold text-primary">
-          Let’s Get Connected
-        </h2>
+        <h2 className="text-md md:text-xl lg:text-2xl font-medium">Let&apos;s Get Connected</h2>
         <ContactForm sendMail={sendMail} />
       </div>
       <div className="w-full md:w-1/2">
-        <div
-          className="flex gap-2 text-sm md:text-md lg:text-xl bg-[#F4FBA3] text-black rounded md:p-2 text-center justify-center w-5/6 mx-auto md:w-full
-        "
-        >
-          <Mail />
-          <h2 className="md:uppercase tracking-wide">
-            neelimasultana6@gmail.com
-          </h2>
-        </div>
-        <Image
-          src={image}
-          alt="Decorative floral background"
-          width={512}
-          height={512}
-          className="rounded shadow-md mt-5"
-        />
+        <Button className="dark:text-black font-mono w-full bg-[#669bd2]" asChild>
+          <a href="mailto:neelimasultana6@gmail.com">
+            <Mail />
+            <h2>neelimasultana6@gmail.com</h2>
+          </a>
+        </Button>
 
-        <div className="flex flex-col  lg:flex-row justify-between text-sm pt-2 text-gray-300">
+        <figure className="mb-4 mt-8 overflow-hidden rounded-2xl h-50 relative">
+          <Image src="/mail.png" className="object-cover" alt="mail" fill />
+        </figure>
+
+        <div className="flex flex-col  lg:flex-row justify-between text-sm pt-2">
           <div className="flex gap-4 font-semibold justify-between">
-            <a
-              style={{ textShadow: "0 0 20px  #fff" }}
-              href="https://github.com/neelimapriya"
-              target="_blank"
-            >
+            <a href="https://github.com/neelimapriya" target="_blank">
               Github
             </a>
-            <a
-              style={{ textShadow: "0 0 20px  #fff" }}
-              href="https://www.facebook.com/Neelim.priya/"
-              target="_blank"
-            >
+            <a href="https://www.facebook.com/Neelim.priya/" target="_blank">
               Facebook
             </a>
-            <a
-              style={{ textShadow: "0 0 20px  #fff" }}
-              href="www.linkedin.com/in/nelima-sultana-7b4280298"
-              target="_blank"
-            >
+            <a href="www.linkedin.com/in/nelima-sultana-7b4280298" target="_blank">
               LinkedIn
             </a>
           </div>
-          <a href="tel:+8801882277032"
-            className="font-semibold text-center mt-2 lg:mt-0 hover:text-primary"
-            style={{ textShadow: "0 0 20px  #fff" }}
-          >
-            📞 +880 1882277032
+          <a href="tel:+8801882277032" className="font-semibold text-center mt-2 lg:mt-0 hover:text-primary flex items-center gap-2">
+            <PhoneIcon className="size-4" /> +880 1882277032
           </a>
         </div>
       </div>
