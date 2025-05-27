@@ -1,4 +1,5 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { LinkIcon } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
@@ -38,8 +39,9 @@ const AboutPage = () => {
               <TableCell>2025</TableCell>
               <TableCell>
                 {' '}
-                <Link style={{ textShadow: '0 0 20px  #F4FBA3' }} href="https://drive.google.com/file/d/1pysCVgCPRjfw9lMNKalA4f3R2DxtQxeX/view?usp=sharing">
-                  Click🔗
+                <Link href="https://drive.google.com/file/d/1pysCVgCPRjfw9lMNKalA4f3R2DxtQxeX/view?usp=sharing" className="flex items-center gap-2">
+                  Click
+                  <LinkIcon className="size-4" />
                 </Link>{' '}
               </TableCell>
             </TableRow>
@@ -49,9 +51,10 @@ const AboutPage = () => {
               <TableCell>Programming Hero</TableCell>
               <TableCell>2023</TableCell>
               <TableCell>
-                <Link style={{ textShadow: '0 0 20px  #F4FBA3' }} href="https://drive.google.com/file/d/1fqcI48v-kt7o47nTRu4oyOdXBx-HBIua/view?usp=sharing">
+                <Link href="https://drive.google.com/file/d/1fqcI48v-kt7o47nTRu4oyOdXBx-HBIua/view?usp=sharing" className="flex items-center gap-2">
                   {' '}
-                  Click🔗
+                  Click
+                  <LinkIcon className="size-4" />
                 </Link>
               </TableCell>
             </TableRow>
