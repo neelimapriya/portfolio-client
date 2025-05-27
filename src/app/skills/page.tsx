@@ -167,6 +167,12 @@ const SkillsPage = () => {
               <td className="border border-gray-700 px-4 py-2 text-[#F4FBA3]">Vercel</td>
               <td className="border border-gray-700 px-4 py-2 text-[#F4FBA3]">Netlify</td>
             </tr>
+            <tr >
+            
+              <td className="border border-gray-700 px-4 py-2 text-[#F4FBA3]">SSLCOMMERZ</td>
+              <td className="border border-gray-700 px-4 py-2 text-[#F4FBA3]">Stripe</td>
+              <td className="border border-gray-700 px-4 py-2 text-[#F4FBA3]">ShurjoPay</td>
+            </tr>
           </tbody>
         </table>
       </div>
