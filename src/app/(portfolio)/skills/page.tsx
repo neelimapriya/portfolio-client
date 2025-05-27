@@ -1,4 +1,4 @@
-
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
 type skills = {
   skill: string;
@@ -7,174 +7,150 @@ type skills = {
 
 const frontEndSkillData: skills[] = [
   {
-    skill: "Html",
-    level: "Expert",
+    skill: 'Html',
+    level: 'Expert',
   },
   {
-    skill: "CSS",
-    level: "Expert",
+    skill: 'CSS',
+    level: 'Expert',
   },
   {
-    skill: "JavaScript",
-    level: "Expert",
+    skill: 'JavaScript',
+    level: 'Expert',
   },
   {
-    skill: "Tailwind CSS",
-    level: "Expert",
+    skill: 'Tailwind CSS',
+    level: 'Expert',
   },
   {
-    skill: "ReactJs",
-    level: "Expert",
+    skill: 'ReactJs',
+    level: 'Expert',
   },
   {
-    skill: "NextJs",
-    level: "Expert",
+    skill: 'NextJs',
+    level: 'Expert',
   },
   {
-    skill: "Material UI",
-    level: "Expert",
+    skill: 'Material UI',
+    level: 'Expert',
   },
   {
-    skill: "Shadcn UI",
-    level: "Expert",
+    skill: 'Shadcn UI',
+    level: 'Expert',
   },
   {
-    skill: "Typescript",
-    level: "Expert",
+    skill: 'Typescript',
+    level: 'Expert',
   },
   {
-    skill: "Redux",
-    level: "Intermediate",
+    skill: 'Redux',
+    level: 'Intermediate',
   },
 ];
 const backendEndSkillData: skills[] = [
   {
-    skill: "Nodejs",
-    level: "Intermediate",
+    skill: 'Nodejs',
+    level: 'Intermediate',
   },
   {
-    skill: "Express",
-    level: "Expert",
+    skill: 'Express',
+    level: 'Expert',
   },
   {
-    skill: "MongoDB",
-    level: "Expert",
+    skill: 'MongoDB',
+    level: 'Expert',
   },
   {
-    skill: "Mongoose",
-    level: "Expert",
+    skill: 'Mongoose',
+    level: 'Expert',
   },
   {
-    skill: "JWT",
-    level: "Expert",
+    skill: 'JWT',
+    level: 'Expert',
   },
   {
-    skill: "Cookies",
-    level: "Expert",
+    skill: 'Cookies',
+    level: 'Expert',
   },
   {
-    skill: "DBMS",
-    level: "Intermediate",
+    skill: 'DBMS',
+    level: 'Intermediate',
   },
   {
-    skill: "SQL",
-    level: "Intermediate",
+    skill: 'SQL',
+    level: 'Intermediate',
   },
   {
-    skill: "PostgreSQL",
-    level: "Intermediate",
+    skill: 'PostgreSQL',
+    level: 'Intermediate',
   },
   {
-    skill: "Prisma",
-    level: "Intermediate",
+    skill: 'Prisma',
+    level: 'Intermediate',
   },
 ];
 
 const SkillsPage = () => {
   return (
     <div className="">
-      <h2 className="text-primary text-2xl text-center font-semibold uppercase">Skills & Technologies</h2>
-      <p className="text-gray-200 text-center w-full lg:w-2/3 mx-auto mb-5">As a full-stack developer, I bring together the best of both frontend and backend technologies to build fast, scalable, and responsive web applications. From crafting clean UI components to managing databases and server-side logic, here&apos;s a snapshot of the tools and technologies I work with regularly.</p>
-      <div className="flex flex-col md:flex-row w-full">
-        <div className="overflow-x-auto bg-black text-white p-4 rounded-lg md:w-1/2">
-          <h2 className="text-lg font-semibold mb-4">FrontEnd Skills</h2>
-          <table className="w-full border border-gray-700 text-sm">
-            <thead>
-              <tr className="bg-[#F4FBA3] text-black">
-                <th className="border border-gray-700 px-4 py-2 text-left">
-                  Skills
-                </th>
-                <th className="border border-gray-700 px-4 py-2 text-left">
-                  Level
-                </th>
-              </tr>
-            </thead>
-            <tbody>
+      <h1 className="text-2xl text-center font-semibold mb-4">Skills & Technologies</h1>
+      <p className="text-center w-full lg:w-2/3 mx-auto mb-5">
+        As a full-stack developer, I bring together the best of both frontend and backend technologies to build fast, scalable, and responsive web applications. From crafting clean UI components to
+        managing databases and server-side logic, here&apos;s a snapshot of the tools and technologies I work with regularly.
+      </p>
+      <div className="flex flex-col md:flex-row w-full gap-6">
+        <div className="overflow-x-auto  rounded-lg md:w-1/2">
+          <h2 className="text-lg font-semibold mb-4">Frontend Skills</h2>
+          <Table className="w-full text-sm shadow-2xl">
+            <TableHeader>
+              <TableRow>
+                <TableHead>Skills</TableHead>
+                <TableHead>Level</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
               {frontEndSkillData.map((data, index) => (
-                <tr key={index}>
-                  <td className="border border-gray-700 px-4 py-2">
-                    {data.skill}
-                  </td>
-                  <td className="border border-gray-700 px-4 py-2">
-                    {data.level}
-                  </td>
-                </tr>
+                <TableRow key={index}>
+                  <TableCell className="text-primary font-medium">{data.skill}</TableCell>
+                  <TableCell>{data.level}</TableCell>
+                </TableRow>
               ))}
-            </tbody>
-          </table>
+            </TableBody>
+          </Table>
         </div>
-        <div className="overflow-x-auto bg-black text-white p-4 rounded-lg md:w-1/2">
-          <h2 className="text-lg font-semibold mb-4">BackEnd Skills</h2>
-          <table className="w-full border border-gray-700 text-sm">
-            <thead>
-              <tr className="bg-[#F4FBA3] text-black">
-                <th className="border border-gray-700 px-4 py-2 text-left">
-                  Skills
-                </th>
-                <th className="border border-gray-700 px-4 py-2 text-left">
-                  Level
-                </th>
-              </tr>
-            </thead>
-            <tbody>
+        <div className="overflow-x-auto  rounded-lg md:w-1/2">
+          <h2 className="text-lg font-semibold mb-4">Backend Skills</h2>
+          <Table className="w-full shadow-2xl text-sm">
+            <TableHeader>
+              <TableRow>
+                <TableHead>Skills</TableHead>
+                <TableHead>Level</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
               {backendEndSkillData.map((data, index) => (
-                <tr key={index}>
-                  <td className="border border-gray-700 px-4 py-2">
-                    {data.skill}
-                  </td>
-                  <td className="border border-gray-700 px-4 py-2">
-                    {data.level}
-                  </td>
-                </tr>
+                <TableRow key={index}>
+                  <TableCell className="text-primary font-medium">{data.skill}</TableCell>
+                  <TableCell>{data.level}</TableCell>
+                </TableRow>
               ))}
-            </tbody>
-          </table>
+            </TableBody>
+          </Table>
         </div>
       </div>
-      <div className="overflow-x-auto bg-black text-white p-4 rounded-lg w-full md:w-1/2">
+      <div className="mt-6">
         <h2 className="text-lg font-semibold mb-4">Other Skills</h2>
-        <table className="w-full border border-gray-700 text-sm">
-          <tbody>
-            <tr >
-              <td className="border border-gray-700 px-4 py-2 text-primary">Github</td>
-              <td className="border border-gray-700 px-4 py-2 text-primary">Wordpress</td>
-              <td className="border border-gray-700 px-4 py-2 text-primary">Figma</td>
-            
-            </tr>
-            <tr >
-            
-              <td className="border border-gray-700 px-4 py-2 text-primary">Postman</td>
-              <td className="border border-gray-700 px-4 py-2 text-primary">Vercel</td>
-              <td className="border border-gray-700 px-4 py-2 text-primary">Netlify</td>
-            </tr>
-            <tr >
-            
-              <td className="border border-gray-700 px-4 py-2 text-primary">SSLCOMMERZ</td>
-              <td className="border border-gray-700 px-4 py-2 text-primary">Stripe</td>
-              <td className="border border-gray-700 px-4 py-2 text-primary">ShurjoPay</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="flex flex-wrap gap-4 justify-start text-sm">
+          <div className="bg-popover p-2 rounded-lg shadow-md">Github</div>
+          <div className="bg-popover p-2 rounded-lg shadow-md">Wordpress</div>
+          <div className="bg-popover p-2 rounded-lg shadow-md">Figma</div>
+          <div className="bg-popover p-2 rounded-lg shadow-md">Postman</div>
+          <div className="bg-popover p-2 rounded-lg shadow-md">Vercel</div>
+          <div className="bg-popover p-2 rounded-lg shadow-md">Netlify</div>
+          <div className="bg-popover p-2 rounded-lg shadow-md">SSLCOMMERZ</div>
+          <div className="bg-popover p-2 rounded-lg shadow-md">Stripe</div>
+          <div className="bg-popover p-2 rounded-lg shadow-md">ShurjoPay</div>
+        </div>
       </div>
     </div>
   );
