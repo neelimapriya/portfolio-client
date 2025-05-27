@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
-      <aside className="sticky top-0 z-50 w-20 md:w-40 bg-black text-white flex flex-col items-center py-10 space-y-6 border-r border-gray-800">
+      <aside className="sticky top-0 z-50 w-20 md:w-40 flex flex-col items-center py-10 space-y-6 border-r">
         <NavItem icon="🏠" label="Home" href="/" />
         <NavItem icon="👩‍💻" label="About" href="/about" />
         <NavItem icon="📚" label="Skills" href="/skills" />
@@ -25,7 +25,7 @@ export default function RootLayout({
       </aside>
 
       {/* Main content */}
-      <main className="flex-1 overflow-y-auto p-6 md:p-10">
+      <main className="flex-1 overflow-y-auto p-6 md:p-10 flex flex-col">
         <Providers>{children}</Providers>
       </main>
     </div>
@@ -34,7 +34,7 @@ export default function RootLayout({
 function NavItem({ icon, label, href }: { icon: string; label: string; href: string }) {
   return (
     <Link href={href} style={{ textShadow: '0 0 20px  #fff' }}>
-      <div className="flex  items-center text-sm space-x-1 space-y-1 hover:text-[#F4FBA3] cursor-pointer">
+      <div className="flex  items-center text-sm space-x-1 space-y-1 hover:text-primary cursor-pointer">
         <span className="text-2xl">{icon}</span>
         <span>{label}</span>
       </div>

@@ -58,7 +58,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               asChild
               variant="ghost"
               size="sm"
-              className="text-xs px-2 py-1 text-black hover:text-[#F4FBA3] hover:bg-black 
+              className="text-xs px-2 py-1 text-black hover:text-primary hover:bg-black 
                 "
             >
               <Link
@@ -76,7 +76,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               asChild
               variant="ghost"
               size="sm"
-              className="text-xs px-2 py-1 text-black hover:text-[#F4FBA3] hover:bg-black 
+              className="text-xs px-2 py-1 text-black hover:text-primary hover:bg-black 
                 "
             >
               <Link
@@ -107,7 +107,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               asChild
               variant="default"
               size="sm"
-              className="text-xs px-2 py-1 bg-[#F4FBA3] hover:bg-black hover:text-[#F4FBA3] text-black"
+              className="text-xs px-2 py-1 bg-[#F4FBA3] hover:bg-black hover:text-primary text-black"
             >
               <Link
                 href={project?.liveUrl}

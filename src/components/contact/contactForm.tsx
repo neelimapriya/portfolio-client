@@ -88,7 +88,7 @@ const ContactForm = ({
         <div>
           <Button
             type="submit"
-            className="bg-[#F4FBA3] text-black cursor-pointer hover:text-[#F4FBA3] w-full"
+            className="bg-[#F4FBA3] text-black cursor-pointer hover:text-primary w-full"
           >
             {isSubmitting ? "Processing" : "Submit"}
           </Button>

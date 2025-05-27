@@ -41,7 +41,7 @@ const ContactPage = () => {
   return (
     <div className="flex flex-col md:flex-row w-full md:mt-5">
       <div className="w-full md:w-1/2">
-        <h2 className="text-lg md:text-2xl lg:text-3xl text-center font-bold text-[#F4FBA3]">
+        <h2 className="text-lg md:text-2xl lg:text-3xl text-center font-bold text-primary">
           Let’s Get Connected
         </h2>
         <ContactForm sendMail={sendMail} />
@@ -89,7 +89,7 @@ const ContactPage = () => {
             </a>
           </div>
           <a href="tel:+8801882277032"
-            className="font-semibold text-center mt-2 lg:mt-0 hover:text-[#F4FBA3]"
+            className="font-semibold text-center mt-2 lg:mt-0 hover:text-primary"
             style={{ textShadow: "0 0 20px  #fff" }}
           >
             📞 +880 1882277032

@@ -8,13 +8,13 @@ const AboutPage = () => {
         <h2 className="">Hi, I am <span className="text-xl font-bold">Nelima Sultana</span></h2>
         <br />
         <p className=" w-3/4">
-          As a <span className="text-[#F4FBA3]"> Full Stack Web Developer</span>
+          As a <span className="text-primary"> Full Stack Web Developer</span>
           , I design and develop dynamic, responsive, and user-friendly web
           applications from end to end. My work spans across crafting intuitive
-          front-end interfaces using <span className="text-[#F4FBA3]">HTML, CSS, JavaScript</span>, and modern
-          frameworks like <span className="text-[#F4FBA3]">React, NextJs</span>, to building scalable back-end systems with <span className="text-[#F4FBA3]">Node.js and Express</span>.
+          front-end interfaces using <span className="text-primary">HTML, CSS, JavaScript</span>, and modern
+          frameworks like <span className="text-primary">React, NextJs</span>, to building scalable back-end systems with <span className="text-primary">Node.js and Express</span>.
            I’m experienced in working with both relational
-          and non-relational databases such as <span className="text-[#F4FBA3]">MySQL and MongoDB</span>, and I
+          and non-relational databases such as <span className="text-primary">MySQL and MongoDB</span>, and I
           regularly create and integrate RESTful APIs. I use Git for version
           control, manage deployments with platforms like Vercel or Netlify, and
           ensure optimized performance across devices. With a focus on clean
@@ -23,7 +23,7 @@ const AboutPage = () => {
         </p>
         
       </div>
-      <div className="overflow-x-auto bg-black text-white p-4 rounded-lg">
+      <div className="overflow-x-auto py-4 rounded-lg">
         <h2 className="text-lg font-semibold mb-4">Education</h2>
         <table className="w-full border border-gray-700 text-sm">
           <thead>

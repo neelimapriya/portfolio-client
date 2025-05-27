@@ -23,7 +23,7 @@ const ProjectDetailsPage = () => {
 
   if (isFetching || isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-black text-[#F4FBA3]">
+      <div className="min-h-screen flex items-center justify-center bg-black text-primary">
         <p className="text-lg animate-pulse">Loading…</p>
       </div>
     );
@@ -31,18 +31,18 @@ const ProjectDetailsPage = () => {
 
   if (isError || error || !project) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-black text-[#F4FBA3]">
+      <div className="min-h-screen flex items-center justify-center bg-black text-primary">
         <p className="text-lg">Error loading project details</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-black text-[#F4FBA3] px-6 py-10" ref={containerRef}>
+    <div className="min-h-screen bg-black text-primary px-6 py-10" ref={containerRef}>
       <div className="max-w-6xl mx-auto space-y-12">
        
         <div className="mb-6 ">
-          <Button asChild variant="outline" size="sm" className="text-[#F4FBA3]  hover:text-black hover:bg-white">
+          <Button asChild variant="outline" size="sm" className="text-primary  hover:text-black hover:bg-white">
             <Link href="/projects" className="flex items-center gap-2">
               <ArrowLeft size={16} /> Back to Projects
             </Link>
@@ -52,7 +52,7 @@ const ProjectDetailsPage = () => {
         
         <header className="space-y-3">
           <h1 className="text-4xl font-bold leading-tight">{project.title}</h1>
-          <p className="text-lg text-[#F4FBA3]/80">{project.subtitle}</p>
+          <p className="text-lg text-primary/80">{project.subtitle}</p>
           <div className="flex flex-wrap items-center gap-6 text-sm mt-4">
             <div className="flex items-center gap-2">
               <Calendar size={18} />
@@ -80,16 +80,16 @@ const ProjectDetailsPage = () => {
       
         <section>
           <h2 className="text-2xl font-semibold mb-2">Technologies Used</h2>
-          <p className="text-[#F4FBA3]/90 text-base leading-relaxed">{project.technologies}</p>
+          <p className="text-primary/90 text-base leading-relaxed">{project.technologies}</p>
         </section>
 
        
         <section>
           <Card className="bg-black border border-[#F4FBA3]">
             <CardContent className="py-6">
-              <h2 className="text-2xl font-semibold mb-4 text-[#F4FBA3]">Project Overview</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-primary">Project Overview</h2>
               <div
-                className="prose prose-invert max-w-none text-[#F4FBA3]"
+                className="prose prose-invert max-w-none text-primary"
                 dangerouslySetInnerHTML={{ __html: project.description }}
               />
             </CardContent>
@@ -106,14 +106,14 @@ const ProjectDetailsPage = () => {
           )}
           {project.githubClientUrl && (
             <Link href={project.githubClientUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
-              <Button variant="outline" className="w-full py-4 border-[#F4FBA3] text-[#F4FBA3] bg-black hover:bg-[#F4FBA3] hover:text-black cursor-pointer">
+              <Button variant="outline" className="w-full py-4 border-[#F4FBA3] text-primary bg-black hover:bg-[#F4FBA3] hover:text-black cursor-pointer">
                 <Globe className="mr-2" /> Client GitHub <ExternalLink className="ml-2" />
               </Button>
             </Link>
           )}
           {project.githubServerUrl && (
             <Link href={project.githubServerUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
-              <Button variant="outline" className="w-full py-4 border-[#F4FBA3] text-[#F4FBA3] bg-black hover:bg-[#F4FBA3] hover:text-black cursor-pointer">
+              <Button variant="outline" className="w-full py-4 border-[#F4FBA3] text-primary bg-black hover:bg-[#F4FBA3] hover:text-black cursor-pointer">
                 <Globe className="mr-2" /> Server GitHub <ExternalLink className="ml-2" />
               </Button>
             </Link>

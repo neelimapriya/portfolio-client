@@ -93,7 +93,7 @@ const backendEndSkillData: skills[] = [
 const SkillsPage = () => {
   return (
     <div className="">
-      <h2 className="text-[#F4FBA3] text-2xl text-center font-semibold uppercase">Skills & Technologies</h2>
+      <h2 className="text-primary text-2xl text-center font-semibold uppercase">Skills & Technologies</h2>
       <p className="text-gray-200 text-center w-full lg:w-2/3 mx-auto mb-5">As a full-stack developer, I bring together the best of both frontend and backend technologies to build fast, scalable, and responsive web applications. From crafting clean UI components to managing databases and server-side logic, here&apos;s a snapshot of the tools and technologies I work with regularly.</p>
       <div className="flex flex-col md:flex-row w-full">
         <div className="overflow-x-auto bg-black text-white p-4 rounded-lg md:w-1/2">
@@ -156,22 +156,22 @@ const SkillsPage = () => {
         <table className="w-full border border-gray-700 text-sm">
           <tbody>
             <tr >
-              <td className="border border-gray-700 px-4 py-2 text-[#F4FBA3]">Github</td>
-              <td className="border border-gray-700 px-4 py-2 text-[#F4FBA3]">Wordpress</td>
-              <td className="border border-gray-700 px-4 py-2 text-[#F4FBA3]">Figma</td>
+              <td className="border border-gray-700 px-4 py-2 text-primary">Github</td>
+              <td className="border border-gray-700 px-4 py-2 text-primary">Wordpress</td>
+              <td className="border border-gray-700 px-4 py-2 text-primary">Figma</td>
             
             </tr>
             <tr >
             
-              <td className="border border-gray-700 px-4 py-2 text-[#F4FBA3]">Postman</td>
-              <td className="border border-gray-700 px-4 py-2 text-[#F4FBA3]">Vercel</td>
-              <td className="border border-gray-700 px-4 py-2 text-[#F4FBA3]">Netlify</td>
+              <td className="border border-gray-700 px-4 py-2 text-primary">Postman</td>
+              <td className="border border-gray-700 px-4 py-2 text-primary">Vercel</td>
+              <td className="border border-gray-700 px-4 py-2 text-primary">Netlify</td>
             </tr>
             <tr >
             
-              <td className="border border-gray-700 px-4 py-2 text-[#F4FBA3]">SSLCOMMERZ</td>
-              <td className="border border-gray-700 px-4 py-2 text-[#F4FBA3]">Stripe</td>
-              <td className="border border-gray-700 px-4 py-2 text-[#F4FBA3]">ShurjoPay</td>
+              <td className="border border-gray-700 px-4 py-2 text-primary">SSLCOMMERZ</td>
+              <td className="border border-gray-700 px-4 py-2 text-primary">Stripe</td>
+              <td className="border border-gray-700 px-4 py-2 text-primary">ShurjoPay</td>
             </tr>
           </tbody>
         </table>

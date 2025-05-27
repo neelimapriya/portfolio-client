@@ -32,7 +32,7 @@ const ProjectsPage = () => {
   return (
     <section className="w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
       <header className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#F4FBA3] mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
           Explore Projects
         </h2>
         <p className="text-lg text-gray-300 max-w-xl mx-auto">
