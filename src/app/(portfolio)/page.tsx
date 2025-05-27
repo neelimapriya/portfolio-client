@@ -13,7 +13,7 @@ export default function Home() {
   const cvFileName = '';
   const cvPath = `/cv/${cvFileName}`;
 
-  const driveLink = 'https://docs.google.com/document/d/1jT4jXK7X9F4UwqZqP5bB0_SVNHeOBxKvKFUtefUgQNU/edit?usp=drive_link';
+  const driveLink = 'https://drive.google.com/file/d/1pSAg1DGfXTZy28U8nMo0hBfuhUA_hNXN/view?usp=sharing';
 
   const handleDownloadCV = async () => {
     setIsDownloading(true);
