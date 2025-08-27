@@ -14,11 +14,12 @@ const projectApi = baseApi.injectEndpoints({
         return {
           url: `/project?${params.toString()}`,
           method: "GET",
-        };
+        }; 
       },
       transformResponse: (response: TResponseRedux<TProject[]>) => ({
         data: response.data,
         meta: response.meta,
+        
       }),
       providesTags: ["Project"],
     }),
